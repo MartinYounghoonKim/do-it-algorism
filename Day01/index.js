@@ -9,3 +9,7 @@ function solution(s) {
 
     return answer;
 }
+
+function solution1(s) {
+    return s.substr(Math.ceil(s.length/2) - 1, s.length % 2 === 0 ? 2 : 1);
+}
