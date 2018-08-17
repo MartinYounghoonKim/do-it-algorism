@@ -10,5 +10,6 @@ function solution(a, b) {
 }
 
 function solution (a,b) {
+    // (첫째수 + 마지막 수) * 총 더할 수의 개수 / 2
     return (a+b)*(Math.abs(a-b)+1)/2;
 }
