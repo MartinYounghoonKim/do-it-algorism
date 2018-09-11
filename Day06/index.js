@@ -5,25 +5,19 @@ function solution(arr) {
 }
 
 function solution (arr) {
-    // 임의의 대상 선정
-    var pivot = arr[2];
-    var result = [];
+    var minimum = arr[0];
+    var minimumIndex = 0;
+
     if (arr.length < 2) {
-        // 비교 대상이 없는 경우는 -1
-        result.push(-1);
-    } else {
-        for (var i = 0; i < arr.length; i++) {
-            if (arr[i] < pivot) {
-                // 임의의 값보다 작으면 임의의 대상을 결과에 대입
-                result.push(pivot);
-                pivot = arr[i];
-            } else if (arr[i] > pivot) {
-                // 임의의 값보다 크면 해당 비교 대상값을 결과에 대입
-                result.push(arr[i]);
-            }
+        return [-1];
+    }
+    for(var i =1; i < arr.length; i ++ ) {
+        if (arr[i] < minimum) {
+            minimum = arr[i];
+            minimumIndex = i;
         }
     }
-
-    return result;
+    arr.splice(minimumIndex, 1)
+    return arr;
 }
-solution([4,3,2,1,5]);
+solution([4,3,2,1]);
