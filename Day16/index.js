@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-function solution(n) {
-  let a = 0;
-  let b = 1;
-  let temp = 0;
-  for(let i = 1; i < n; i++) {
-    temp = a % 1234567;
-    a = b;
-    b += temp % 1234567;
-  }
-  return b % 1234567;
-}
-
-solution(9);
-=======
 function move(from, to){
   console.log(`${from}에서 ${to} 로 이동한다.`);
 }
@@ -55,6 +40,3 @@ function solution (n) {
   hanoi (n, 1, 3);
   return result
 }
-
-
->>>>>>> a72de34d3e83893f5fd0b4117812496f35ea9693
