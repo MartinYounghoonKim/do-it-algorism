@@ -1,22 +1,23 @@
 function solution(arr) {
-  let answer = 0;
-  let gcd = getGCD(arr[0], arr[1]);
+  let gcd = 0;
+  let length = arr.length;
+  let flag = 0;
+  do {
+    gcd = getICM(arr[flag], arr[flag+1]);
+    flag++;
+  } while (flag < length - 1);
+
   console.log(gcd);
-  for (let i = 2; i < arr.length; i++) {
-    gcd = getGCD(gcd, arr[i]);
-  }
-  console.log(gcd);
+  var answer = 0;
   return answer;
 }
-
-solution([12, 24, 6, 8, 30]);
+solution([4,7]);
 
 function getGCD (a, b) {
-  const min = a > b ? b : a;
-  const max = a > b ? a : b;
-  if (min % max === 0) {
-    return min;
-  } else {
-    return min % max;
-  }
+  console.log(b % a);
+  return a % b === 0 ? b : a % b;
+}
+
+function getICM (a, b) {
+  return a * b / getGCD(a, b);
 }
