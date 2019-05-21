@@ -1,0 +1,22 @@
+{
+  "name": "do-it-algorism",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.spec.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MartinYounghoonKim/do-it-algorism.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MartinYounghoonKim/do-it-algorism/issues"
+  },
+  "homepage": "https://github.com/MartinYounghoonKim/do-it-algorism#readme",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
